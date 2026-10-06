@@ -1,0 +1,113 @@
+/* ─── Site Footer ─── */
+.site-footer {
+  background: var(--c-ink);
+  background-image: var(--dot-pattern);
+  color: var(--c-paper);
+  padding-block: var(--sp-section) var(--sp-xl);
+  border-block-start: 1px solid var(--c-line);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-2xl);
+  margin-block-end: var(--sp-3xl);
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+
+.site-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-footer__logo-mark {
+  width: 28px;
+  height: 28px;
+  fill: var(--c-cyan);
+}
+
+.site-footer__logo-text {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.site-footer__tagline {
+  color: var(--c-muted);
+  font-size: var(--fs-small);
+  max-width: 30ch;
+}
+
+.site-footer__col-title {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--c-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-block-end: var(--sp-md);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.site-footer__links a {
+  font-size: var(--fs-small);
+  color: var(--c-paper);
+  transition: color var(--dur-2) var(--ease);
+}
+
+.site-footer__links a:hover {
+  color: var(--c-cyan);
+}
+
+/* Bottom bar */
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-start: var(--sp-lg);
+  border-block-start: 1px solid var(--c-line);
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}
+
+.site-footer__bottom a {
+  color: var(--c-muted);
+  transition: color var(--dur-2) var(--ease);
+}
+
+.site-footer__bottom a:hover { color: var(--c-paper); }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-xl);
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: var(--sp-sm);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+}

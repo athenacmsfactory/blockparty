@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blockparty — herbruikbare statische design-template met split-hero, marquee-strip, kaartstapel en accordion. Gebouwd met Vite en vanilla HTML/CSS/JS." />
+  <meta name="theme-color" content="#000000" />
+  <title>Blockparty — Template Demo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2322e0e0'/><text x='16' y='23' font-size='18' font-weight='bold' text-anchor='middle' fill='%23000'>B</text></svg>" />
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════
+       SITE HEADER
+       ════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <!-- Brand group -->
+      <div class="site-header__brand">
+        <a href="#" class="site-header__logo" aria-label="Blockparty home">
+          <!-- Logo mark: three connected blocks -->
+          <svg class="site-header__logo-mark" viewBox="0 0 36 36" aria-hidden="true">
+            <rect x="2" y="2" width="14" height="14" rx="3" fill="currentColor" opacity="0.9"/>
+            <rect x="20" y="2" width="14" height="14" rx="3" fill="currentColor" opacity="0.6"/>
+            <rect x="11" y="20" width="14" height="14" rx="3" fill="currentColor" opacity="0.3"/>
+          </svg>
+          <span class="site-header__wordmark">Block<br/>Party</span>
+        </a>
+        <span class="site-header__divider" aria-hidden="true"></span>
+        <span class="site-header__meta">Template · V0.1</span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="site-header__nav" aria-label="Hoofdnavigatie">
+        <div class="site-header__links">
+          <a href="#components" class="site-header__link">Componenten</a>
+          <a href="#accordion" class="site-header__link">FAQ</a>
+        </div>
+        <div class="site-header__actions">
+          <a href="#cta" class="btn btn--outline">
+            Bekijk demo
+            <span class="arrow">
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Burger (mobile) -->
+      <button class="site-header__burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="site-header__mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="Mobiel menu">
+      <a href="#components">Componenten</a>
+      <a href="#accordion">FAQ</a>
+      <a href="#cta" class="btn btn--outline btn--large">Bekijk demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ════════════════════════════════════════════════
+         SPLIT HERO
+         ════════════════════════════════════════════════ -->
+    <section class="split-hero" id="hero">
+      <div class="split-hero__top">
+        <!-- Brand panel (cyan) -->
+        <div class="split-hero__brand">
+          <svg class="split-hero__brand-logo" viewBox="0 0 72 72" aria-hidden="true">
+            <rect x="4" y="4" width="28" height="28" rx="6" fill="currentColor" opacity="0.9"/>
+            <rect x="40" y="4" width="28" height="28" rx="6" fill="currentColor" opacity="0.6"/>
+            <rect x="22" y="40" width="28" height="28" rx="6" fill="currentColor" opacity="0.35"/>
+          </svg>
+          <h1 class="split-hero__brand-title">Block<br/>Party</h1>
+          <p class="split-hero__brand-sub">Statische design-template</p>
+        </div>
+
+        <!-- Partner panel -->
+        <div class="split-hero__partner">
+          <div class="split-hero__partner-box">
+            <p class="split-hero__partner-label">Een initiatief van</p>
+            <p class="split-hero__partner-name">Jouw merk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-hero__bottom">
+        <!-- Left panel -->
+        <a href="#components" class="split-hero__panel" id="hero-panel-left">
+          <div class="split-hero__panel-bg">
+            <img src="/src/assets/img/hero-panel-left.svg" alt="" width="800" height="600" loading="eager" />
+          </div>
+          <div class="split-hero__panel-content">
+            <span class="split-hero__panel-title">Ontdek het<br/>programma</span>
+            <svg class="split-hero__panel-arrow" viewBox="0 0 28 28" aria-hidden="true">
+              <path d="M6 14h16M16 8l6 6-6 6"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Right panel -->
+        <a href="#cta" class="split-hero__panel" id="hero-panel-right">
+          <div class="split-hero__panel-bg">
+            <img src="/src/assets/img/hero-panel-right.svg" alt="" width="800" height="600" loading="eager" />
+          </div>
+          <div class="split-hero__panel-content">
+            <span class="split-hero__panel-title">Schrijf je<br/>gratis in</span>
+            <svg class="split-hero__panel-arrow" viewBox="0 0 28 28" aria-hidden="true">
+              <path d="M6 14h16M16 8l6 6-6 6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         INTRO BLOCK
+         ════════════════════════════════════════════════ -->
+    <section class="intro-block section section--light" id="intro">
+      <div class="container">
+        <h2>Eén template, eindeloze mogelijkheden</h2>
+        <p>Blockparty is een herbruikbaar, component-gedreven design-systeem. Geen frameworks, geen afhankelijkheden — enkel vanilla HTML, CSS en JavaScript, gebundeld met Vite.</p>
+        <a href="#components" class="btn btn--outline-dark btn--large">
+          Bekijk componenten
+          <span class="arrow">
+            <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         MARQUEE
+         ════════════════════════════════════════════════ -->
+    <section class="marquee section--dark" id="marquee" aria-label="Beeldstrip">
+      <!-- Row 1: left -->
+      <div class="marquee__row">
+        <div class="marquee__track marquee__track--left">
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-01.svg" alt="" width="400" height="260" loading="lazy" /><span class="marquee__tile-label">Block 01</span></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-02.svg" alt="" width="200" height="260" loading="lazy" /><span class="marquee__tile-label">Block 02</span></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-03.svg" alt="" width="400" height="260" loading="lazy" /><span class="marquee__tile-label">Block 03</span></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-04.svg" alt="" width="200" height="260" loading="lazy" /><span class="marquee__tile-label">Block 04</span></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-05.svg" alt="" width="400" height="260" loading="lazy" /><span class="marquee__tile-label">Block 05</span></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-06.svg" alt="" width="200" height="260" loading="lazy" /><span class="marquee__tile-label">Block 06</span></figure>
+          <!-- Duplicate for seamless loop -->
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-01.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-02.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-03.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-04.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-05.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-06.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+        </div>
+      </div>
+
+      <!-- Row 2: right -->
+      <div class="marquee__row">
+        <div class="marquee__track marquee__track--right">
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-07.svg" alt="" width="200" height="260" loading="lazy" /><span class="marquee__tile-label">Block 07</span></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-08.svg" alt="" width="400" height="260" loading="lazy" /><span class="marquee__tile-label">Block 08</span></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-01.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-04.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-05.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-06.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <!-- Duplicate -->
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-07.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-08.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-01.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-04.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--narrow"><img src="/src/assets/img/tile-05.svg" alt="" width="200" height="260" loading="lazy" /></figure>
+          <figure class="marquee__tile marquee__tile--wide"><img src="/src/assets/img/tile-06.svg" alt="" width="400" height="260" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         CARD DECK / SHUFFLE
+         ════════════════════════════════════════════════ -->
+    <section class="card-deck section" id="components">
+      <div class="container">
+        <div class="card-deck__header">
+          <h2>Kaartstapel</h2>
+          <p>Swipe of klik op "Shuffle" om door de kaarten te bladeren. Volledig touch-compatible.</p>
+        </div>
+
+        <div class="card-deck__stack" id="card-stack">
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-01.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">01 / 06</span>
+              <h3 class="card-deck__card-title">Split Hero</h3>
+              <p class="card-deck__card-desc">Vier kwadrant-layout met merk-, partner- en CTA-panelen. Volledig responsive.</p>
+            </div>
+          </article>
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-02.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">02 / 06</span>
+              <h3 class="card-deck__card-title">Marquee Strip</h3>
+              <p class="card-deck__card-desc">Twee rijen oneindige beeldstrips in tegengestelde richting. Pure CSS-animatie.</p>
+            </div>
+          </article>
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-03.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">03 / 06</span>
+              <h3 class="card-deck__card-title">Kaartstapel</h3>
+              <p class="card-deck__card-desc">Gestapelde kaarten met drag-to-swipe en shuffle-animatie via Pointer Events.</p>
+            </div>
+          </article>
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-04.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">04 / 06</span>
+              <h3 class="card-deck__card-title">Accordion</h3>
+              <p class="card-deck__card-desc">FAQ-stijl accordion met CSS grid-row transitie en exclusief-open modus.</p>
+            </div>
+          </article>
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-05.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">05 / 06</span>
+              <h3 class="card-deck__card-title">Design Tokens</h3>
+              <p class="card-deck__card-desc">Centraal tokensysteem met CSS custom properties voor kleur, typografie en spacing.</p>
+            </div>
+          </article>
+          <article class="card-deck__card">
+            <div class="card-deck__card-visual"><img src="/src/assets/img/card-06.svg" alt="" width="380" height="280" /></div>
+            <div class="card-deck__card-body">
+              <span class="card-deck__card-number">06 / 06</span>
+              <h3 class="card-deck__card-title">Zero Dependencies</h3>
+              <p class="card-deck__card-desc">Geen runtime-afhankelijkheden. Enkel Vite voor bundling en een dev-server.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="card-deck__actions">
+          <button class="card-deck__shuffle" type="button" id="shuffle-btn">
+            <svg class="card-deck__shuffle-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1 5h4l3 4 3-4h4"/>
+              <path d="M1 13h4l3-4 3 4h4"/>
+              <path d="M14 2l3 3-3 3"/>
+              <path d="M14 10l3 3-3 3"/>
+            </svg>
+            Shuffle
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         ACCORDION
+         ════════════════════════════════════════════════ -->
+    <section class="accordion-section section" id="accordion">
+      <div class="container">
+        <div class="accordion-section__header">
+          <h2>Veelgestelde vragen</h2>
+          <p>Alles wat je moet weten over het gebruik van de Blockparty-template.</p>
+        </div>
+
+        <div class="accordion" role="region" aria-label="FAQ">
+          <div class="accordion__item" data-open="false">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+              <span>Wat is Blockparty?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel" id="faq-1" role="region" aria-hidden="true">
+              <div class="accordion__panel-inner">
+                <div class="accordion__content">
+                  Blockparty is een herbruikbare, statische design-template gebouwd met vanilla HTML, CSS en JavaScript. Het bevat veelgebruikte UI-componenten zoals een split-hero, oneindige marquee, kaartstapel met shuffle, en een accordion — zonder enige runtime-afhankelijkheid.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item" data-open="false">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+              <span>Welke technologieën worden gebruikt?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel" id="faq-2" role="region" aria-hidden="true">
+              <div class="accordion__panel-inner">
+                <div class="accordion__content">
+                  De template gebruikt uitsluitend HTML5, CSS (met custom properties voor design tokens) en vanilla ES-modules JavaScript. Vite wordt gebruikt als build-tool en dev-server. Het lettertype Bricolage Grotesque (OFL-licentie) wordt zelf gehost als variabel woff2-bestand.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item" data-open="false">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+              <span>Is de template responsive?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel" id="faq-3" role="region" aria-hidden="true">
+              <div class="accordion__panel-inner">
+                <div class="accordion__content">
+                  Ja. Alle componenten gebruiken fluid typography (clamp), responsive grid-layouts en media queries voor breakpoints. De header schakelt automatisch over naar een hamburger-menu op kleinere schermen. De kaartstapel is volledig touch-compatible via Pointer Events.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item" data-open="false">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4">
+              <span>Hoe pas ik de kleuren aan?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel" id="faq-4" role="region" aria-hidden="true">
+              <div class="accordion__panel-inner">
+                <div class="accordion__content">
+                  Alle kleuren, font-groottes, spacing en motion-waarden zijn gedefinieerd als CSS custom properties in <code>src/styles/tokens.css</code>. Pas de waarden in <code>:root</code> aan en de hele template volgt automatisch. Geen Sass, geen preprocessor — puur platform.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item" data-open="false">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5">
+              <span>Hoe deploy ik naar GitHub Pages?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel" id="faq-5" role="region" aria-hidden="true">
+              <div class="accordion__panel-inner">
+                <div class="accordion__content">
+                  Push naar de <code>main</code>-branch. De meegeleverde GitHub Actions workflow (<code>.github/workflows/deploy.yml</code>) bouwt automatisch de productie-bundle en publiceert deze naar GitHub Pages. Geen handmatige stappen vereist na de eerste push.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         CTA BLOCK
+         ════════════════════════════════════════════════ -->
+    <section class="cta-block section section--cyan" id="cta">
+      <div class="container">
+        <div class="cta-block__inner">
+          <div class="cta-block__visual">
+            <img src="/src/assets/img/cta-visual.svg" alt="" width="600" height="450" loading="lazy" />
+          </div>
+          <div class="cta-block__text">
+            <h2>Klaar om te bouwen?</h2>
+            <p>Clone de repo, pas de tokens aan, en lanceer jouw project in minuten. Geen afhankelijkheden, geen lockin — volledig van jou.</p>
+            <a href="https://github.com/KarelTestSpecial/blockparty" class="btn btn--outline-dark btn--large" target="_blank" rel="noopener">
+              Bekijk op GitHub
+              <span class="arrow">
+                <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════════════════════════════════════
+       SITE FOOTER
+       ════════════════════════════════════════════════ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo">
+            <svg class="site-footer__logo-mark" viewBox="0 0 28 28" aria-hidden="true">
+              <rect x="1" y="1" width="11" height="11" rx="2.5" fill="currentColor" opacity="0.9"/>
+              <rect x="16" y="1" width="11" height="11" rx="2.5" fill="currentColor" opacity="0.6"/>
+              <rect x="8" y="16" width="11" height="11" rx="2.5" fill="currentColor" opacity="0.35"/>
+            </svg>
+            <span class="site-footer__logo-text">Blockparty</span>
+          </div>
+          <p class="site-footer__tagline">
+            Herbruikbare statische design-template. Vite + vanilla HTML/CSS/JS. Geen runtime-afhankelijkheden.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Componenten</h4>
+          <nav class="site-footer__links" aria-label="Component links">
+            <a href="#hero">Split Hero</a>
+            <a href="#marquee">Marquee</a>
+            <a href="#components">Kaartstapel</a>
+            <a href="#accordion">Accordion</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Bronnen</h4>
+          <nav class="site-footer__links" aria-label="Bronnen links">
+            <a href="https://github.com/KarelTestSpecial/blockparty" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://vite.dev" target="_blank" rel="noopener">Vite</a>
+            <a href="https://fonts.google.com/specimen/Bricolage+Grotesque" target="_blank" rel="noopener">Font</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="site-footer__col-title">Licentie</h4>
+          <nav class="site-footer__links" aria-label="Licentie info">
+            <a href="#">MIT License</a>
+            <a href="#">Open Source</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Blockparty. MIT-licentie.</span>
+        <span>Gebouwd met <a href="https://vite.dev" target="_blank" rel="noopener">Vite</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

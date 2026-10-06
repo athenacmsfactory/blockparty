@@ -1,0 +1,111 @@
+/* ─── Accordion ─── */
+.accordion-section {
+  padding-block: var(--sp-section);
+  background: var(--c-ink);
+  color: var(--c-paper);
+}
+
+.accordion-section__header {
+  text-align: center;
+  margin-block-end: var(--sp-2xl);
+}
+
+.accordion-section__header h2 {
+  margin-block-end: var(--sp-md);
+}
+
+.accordion-section__header p {
+  max-width: 50ch;
+  margin-inline: auto;
+  color: var(--c-muted);
+}
+
+.accordion {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.accordion__item {
+  border-block-start: 1px solid var(--c-line);
+}
+
+.accordion__item:last-child {
+  border-block-end: 1px solid var(--c-line);
+}
+
+.accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-lg) 0;
+  text-align: start;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  transition: color var(--dur-2) var(--ease);
+}
+
+.accordion__trigger:hover {
+  color: var(--c-cyan);
+}
+
+.accordion__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform var(--dur-3) var(--ease);
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+  content: '';
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.accordion__icon::before {
+  width: 18px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+  width: 2px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  transition: transform var(--dur-3) var(--ease);
+}
+
+.accordion__item[data-open='true'] .accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion__item[data-open='true'] .accordion__icon {
+  transform: rotate(45deg);
+}
+
+/* Grid-row transition for panel */
+.accordion__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-3) var(--ease);
+}
+
+.accordion__item[data-open='true'] .accordion__panel {
+  grid-template-rows: 1fr;
+}
+
+.accordion__panel-inner {
+  overflow: hidden;
+}
+
+.accordion__content {
+  padding-block-end: var(--sp-xl);
+  color: var(--c-muted);
+  max-width: 65ch;
+  line-height: var(--lh-body);
+}

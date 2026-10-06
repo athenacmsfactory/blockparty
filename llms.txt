@@ -1,0 +1,29 @@
+# Blockparty
+
+> Herbruikbare statische design-template (Vite + vanilla HTML/CSS/JS)
+
+## Componenten
+- Split Hero (4-kwadrant fullscreen layout)
+- Marquee Strip (oneindige beeldstrip, pure CSS)
+- Kaartstapel (drag-to-swipe + shuffle, Pointer Events)
+- Accordion (CSS grid-row transitie)
+- Site Header (fixed, hamburger mobiel)
+- Site Footer (4-kolom grid, dot-patroon)
+
+## Technologie
+- Vanilla HTML5, CSS (custom properties), ES-modules JavaScript
+- Vite als bundler/dev-server
+- Bricolage Grotesque variabel font (OFL, zelfgehost)
+- Geen runtime-afhankelijkheden
+
+## Tokens
+Alle design tokens (kleuren, typografie, spacing, motion) in `src/styles/tokens.css`.
+
+## Broncode
+- `index.html` — demo-pagina
+- `src/styles/` — tokens, base, componenten
+- `src/js/` — interactieve modules (header, card-deck, accordion)
+- `src/assets/` — fonts en SVG-illustraties
+
+## Licentie
+MIT

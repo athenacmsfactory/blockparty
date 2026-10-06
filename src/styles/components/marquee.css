@@ -1,0 +1,77 @@
+/* ─── Marquee Strip ─── */
+.marquee {
+  padding-block: var(--sp-xl);
+  background: var(--c-ink);
+  overflow: hidden;
+}
+
+.marquee__row {
+  overflow: hidden;
+  padding-block: var(--sp-xs);
+}
+
+.marquee__track {
+  display: flex;
+  gap: var(--sp-sm);
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee__track--left {
+  animation: marquee-left 50s linear infinite;
+}
+
+.marquee__track--right {
+  animation: marquee-right 55s linear infinite;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.marquee__tile {
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee__tile--wide {
+  width: 400px;
+  height: 260px;
+}
+
+.marquee__tile--narrow {
+  width: 200px;
+  height: 260px;
+}
+
+.marquee__tile svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.marquee__tile-label {
+  position: absolute;
+  inset-block-end: var(--sp-md);
+  inset-inline-start: var(--sp-md);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--c-paper);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .marquee__tile--wide { width: 280px; height: 180px; }
+  .marquee__tile--narrow { width: 140px; height: 180px; }
+}

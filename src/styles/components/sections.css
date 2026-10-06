@@ -1,0 +1,65 @@
+/* ─── Intro Block ─── */
+.intro-block {
+  padding-block: var(--sp-section);
+  background: var(--c-paper);
+  color: var(--c-ink);
+  text-align: center;
+}
+
+.intro-block h2 {
+  max-width: 18ch;
+  margin-inline: auto;
+  margin-block-end: var(--sp-lg);
+}
+
+.intro-block p {
+  max-width: 55ch;
+  margin-inline: auto;
+  color: var(--c-muted);
+  margin-block-end: var(--sp-xl);
+}
+
+/* ─── CTA Block ─── */
+.cta-block {
+  padding-block: var(--sp-section);
+  background: var(--c-cyan);
+  color: var(--c-ink);
+}
+
+.cta-block__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2xl);
+  align-items: center;
+}
+
+.cta-block__visual {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--c-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-block__visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cta-block__text h2 {
+  margin-block-end: var(--sp-md);
+}
+
+.cta-block__text p {
+  margin-block-end: var(--sp-xl);
+  max-width: 45ch;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .cta-block__inner {
+    grid-template-columns: 1fr;
+  }
+}

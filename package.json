@@ -1,0 +1,16 @@
+{
+  "name": "blockparty",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Blockparty \u2014 herbruikbare statische design-template (Vite + vanilla HTML/CSS/JS) met split-hero, marquee, kaartstapel en accordion.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "8.3.1"
+  }
+}
