@@ -18,7 +18,7 @@ Geïnspireerd op de visuele taal van [digitalconstructionday.be](https://digital
 ## Quickstart
 
 ```bash
-git clone https://github.com/KarelTestSpecial/blockparty.git
+git clone https://github.com/athenacmsfactory/blockparty.git
 cd blockparty
 pnpm install
 pnpm dev        # → http://localhost:5173
